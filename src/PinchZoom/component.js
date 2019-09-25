@@ -840,6 +840,9 @@ class PinchZoom extends Component<Props> {
         ["touchmove", this._handlerOnTouchMove]
       ]
     : [
+        ["touchstart", this._handlerOnTouchStart],
+        ["touchend", this._handlerOnTouchEnd],
+        ["touchmove", this._handlerOnTouchMove],
         ["mousemove", this.simulate(this._handlerOnTouchMove), document],
         ["mousedown", this.simulate(this._handlerOnTouchStart)],
         ["mouseup", this.simulate(this._handlerOnTouchEnd), document],
